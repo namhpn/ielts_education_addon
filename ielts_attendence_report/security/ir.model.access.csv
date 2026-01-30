@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ielts_attendance_report_class_user,ielts.attendance_report_class.user,model_ielts_attendance_report_class,base.group_user,1,0,0,0
+access_ielts_attendance_report_teacher_user,ielts.attendance_report_teacher.user,model_ielts_attendance_report_teacher,base.group_user,1,0,0,0

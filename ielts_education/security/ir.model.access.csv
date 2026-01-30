@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_education_class_user,education.class.user,model_education_class,base.group_user,1,1,1,1
+access_education_enrollment_user,education.enrollment.user,model_education_enrollment,base.group_user,1,1,1,1
+access_education_session_user,education.session.user,model_education_session,base.group_user,1,1,1,1
+access_education_attendance_user,education.attendance.user,model_education_attendance,base.group_user,1,1,1,1
+access_education_progress_user,education.progress.user,model_education_progress,base.group_user,1,1,1,1

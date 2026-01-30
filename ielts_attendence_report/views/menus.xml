@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_ielts_reporting"
+              name="Reports"
+              parent="ielts_education.menu_ielts_education_root"
+              sequence="60"/>
+
+    <menuitem id="menu_ielts_attendance_report_class"
+              name="Attendance by Class"
+              parent="menu_ielts_reporting"
+              action="action_ielts_attendance_report_class"
+              sequence="10"/>
+
+    <menuitem id="menu_ielts_attendance_report_teacher"
+              name="Attendance by Teacher"
+              parent="menu_ielts_reporting"
+              action="action_ielts_attendance_report_teacher"
+              sequence="20"/>
+</odoo>

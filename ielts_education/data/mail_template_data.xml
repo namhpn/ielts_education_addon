@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="email_template_enrollment_welcome" model="mail.template">
+            <field name="name">Welcome</field>
+            <field name="model_id" ref="model_education_enrollment"/>
+            <field name="subject">Welcome to IELTS Center!</field>
+            <field name="email_from">{{ (object.create_uid.email_formatted or user.email_formatted) }}</field>
+            <field name="partner_to">{{ object.student_id.id }}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <t t-out="object.student_id.name or ''">Student</t>,
+                        <br/><br/>
+                        You're enrolled in <strong><t t-out="object.class_id.name or ''">Class Name</t></strong>!
+                        <br/><br/>
+                        Your e-learning account is <strong>example@email.com</strong>, password is <strong>Password123@</strong>.
+                        <br/>
+                        Make sure to change it after your first login.
+                        <br/>
+                        Your target band is: <strong><t t-out="object.target_band or 'N/A'">0.0</t></strong>.
+                        <br/><br/>
+                        Best regards,
+                        <br/>
+                        The IELTS Center
+                    </p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

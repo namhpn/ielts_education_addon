@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_education_progress_tree" model="ir.ui.view">
+        <field name="name">education.progress.list</field>
+        <field name="model">education.progress</field>
+        <field name="arch" type="xml">
+            <list string="Progress">
+                <field name="enrollment_id"/>
+                <field name="student_id"/>
+                <field name="class_id"/>
+                <field name="checkpoint_type"/>
+                <field name="evaluation_date"/>
+                <field name="overall_band"/>
+                <field name="teacher_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_education_progress_form" model="ir.ui.view">
+        <field name="name">education.progress.form</field>
+        <field name="model">education.progress</field>
+        <field name="arch" type="xml">
+            <form string="Progress">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="enrollment_id"/>
+                            <field name="student_id"/>
+                            <field name="class_id"/>
+                            <field name="checkpoint_type"/>
+                            <field name="evaluation_date"/>
+                        </group>
+                        <group>
+                            <field name="listening"/>
+                            <field name="reading"/>
+                            <field name="writing"/>
+                            <field name="speaking"/>
+                            <field name="overall_band"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="teacher_id"/>
+                        <field name="teacher_comment"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_education_progress" model="ir.actions.act_window">
+        <field name="name">Progress</field>
+        <field name="res_model">education.progress</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ielts_attendance_report_teacher_tree" model="ir.ui.view">
+        <field name="name">ielts.attendance_report_teacher.list</field>
+        <field name="model">ielts.attendance_report_teacher</field>
+        <field name="arch" type="xml">
+            <list string="Teacher Attendance">
+                <field name="teacher_id"/>
+                <field name="average_attendance_rate" widget="progressbar"/>
+                <field name="total_classes"/>
+                <field name="total_absent_excused"/>
+                <field name="total_absent_unexcused"/>
+                <field name="total_late"/>
+                <field name="total_leave_early"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_ielts_attendance_report_teacher_pivot" model="ir.ui.view">
+        <field name="name">ielts.attendance_report_teacher.pivot</field>
+        <field name="model">ielts.attendance_report_teacher</field>
+        <field name="arch" type="xml">
+            <pivot string="Teacher Attendance Analysis" disable_linking="True">
+                <field name="teacher_id" type="row"/>
+                <field name="average_attendance_rate" type="measure"/>
+                <field name="total_present" type="measure"/>
+                <field name="total_absent_excused" type="measure"/>
+                <field name="total_absent_unexcused" type="measure"/>
+                <field name="total_late" type="measure"/>
+                <field name="total_leave_early" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_ielts_attendance_report_teacher_graph" model="ir.ui.view">
+        <field name="name">ielts.attendance_report_teacher.graph</field>
+        <field name="model">ielts.attendance_report_teacher</field>
+        <field name="arch" type="xml">
+            <graph string="Teacher Attendance Rate" type="bar">
+                <field name="teacher_id"/>
+                <field name="average_attendance_rate" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_ielts_attendance_report_teacher" model="ir.actions.act_window">
+        <field name="name">Attendance by Teacher</field>
+        <field name="res_model">ielts.attendance_report_teacher</field>
+        <field name="view_mode">list,pivot,graph</field>
+    </record>
+</odoo>

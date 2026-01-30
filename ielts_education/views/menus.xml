@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_ielts_education_root" name="IELTS Education" sequence="10"/>
+
+    <menuitem id="menu_education_class"
+              name="Classes"
+              parent="menu_ielts_education_root"
+              action="action_education_class"
+              sequence="10"/>
+
+    <menuitem id="menu_education_enrollment"
+              name="Students"
+              parent="menu_ielts_education_root"
+              action="action_education_enrollment"
+              sequence="20"/>
+
+    <menuitem id="menu_education_session"
+              name="Sessions"
+              parent="menu_ielts_education_root"
+              action="action_education_session"
+              sequence="30"/>
+
+    <menuitem id="menu_education_attendance"
+              name="Attendances"
+              parent="menu_ielts_education_root"
+              action="action_education_attendance"
+              sequence="40"/>
+
+    <menuitem id="menu_education_progress"
+              name="Progress"
+              parent="menu_ielts_education_root"
+              action="action_education_progress"
+              sequence="50"/>
+</odoo>

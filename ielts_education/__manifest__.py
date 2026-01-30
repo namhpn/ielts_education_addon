@@ -1,0 +1,22 @@
+{
+    "name": "IELTS Education",
+    "summary": "Group 3 EC213 CRM Capstone Project",
+    "version": "1.0",
+    "author": "Nam Hoang <tradewindvntc@gmail.com>",
+    "category": "Education",
+    "depends": ["base", "crm", "hr", "mail"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/education_class_views.xml",
+        "views/education_enrollment_views.xml",
+        "views/education_session_views.xml",
+        "views/education_attendance_views.xml",
+        "views/education_progress_views.xml",
+        "views/menus.xml",
+        "views/crm_lead_views.xml",
+        "data/mail_template_data.xml",
+    ],
+    "application": True,
+    "installable": True,
+    "license": "LGPL-3",
+}
